@@ -23,14 +23,14 @@ Essentially there are 4 major parts to this problem:
 4. __Evalutaion__ : The network needs to be tested with a validation set or the data which the netwok has never seen so that we can determine if the network is overfitted or generalized. If the network gives very bad result on the test data but very good result on the training data then it implies that the network is overfitted.
 
 
-**Note: For all the above key aspects of the problem we have written detailed analysis/notes in the jupyter notebook itself.**
+**Note: For all the above key aspects of the problem I have written detailed analysis/notes in the jupyter notebook itself.**
 
 
 ### Data Creation Approaches
-we want to mention that we experimented with two approaches to generate the data. The output is almost the same so cant decide which is better. Hence we have submitted both the notebooks for your reference. 
-1. [Approach1](https://github.com/TSAI-END3-Group/Pytorch_Assignment/blob/master/notebooks/pytorch_assignment_solution_Approach1.ipynb)
+I want to mention that I experimented with two approaches to generate the data. The output is almost the same so cant decide which is better. Hence I have submitted both the notebooks for your reference. 
+1. [Approach1](https://github.com/rohdimp24/EVA8/blob/master/session2_5/notebooks/pytorch_assignment_solution_Approach1.ipynb)
 
-2. [Approach2](https://github.com/TSAI-END3-Group/Pytorch_Assignment/blob/master/notebooks/pytorch_assignment_solution_Approach2.ipynb)
+2. [Approach2](https://github.com/rohdimp24/EVA8/blob/master/session2_5/notebooks/pytorch_assignment_solution_Approach2.ipynb)
 
 Broadly the two approaches are as follows
 
@@ -46,7 +46,7 @@ __Approach2:__ The dataset ```_init_``` function will only generate MNIST images
 
 
 The MNIST data will be automatically downloaded if it is present in the notebook/data directory
-The code snippets have been copied from the pytorch MNIST class. This helped in understanding the internals of pytorch datasets as well. We have augmented the MNIST class with the additional requirement of random number for this problem. The random number is being generated using the python function 
+The code snippets have been copied from the pytorch MNIST class. This helped in understanding the internals of pytorch datasets as well. I have augmented the MNIST class with the additional requirement of random number for this problem. The random number is being generated using the python function 
 
 ```randint(0,10)```
 
@@ -54,7 +54,7 @@ The code snippets have been copied from the pytorch MNIST class. This helped in 
 
 ## Training Versus Test Infrastructure
 
-Training has been done on GPU. However for the Testing (inference) in real world scenario we generally use CPU so just to highlight this fact we have moved the network from GPU to CPU and evalauted the test accuracy. 
+Training has been done on GPU. However for the Testing (inference) in real world scenario we generally use CPU so just to highlight this fact I have moved the network from GPU to CPU and evalauted the test accuracy. 
 
 ```
 ## During training this code snippet will move the network parameters and the input tensor to GPU
@@ -83,7 +83,7 @@ network.to(device)
 ```
 
 ## Must answered questions (from the assignment)
-All the questions have been answered in quite details in the jupyter notebook at the appropriate places. Here we will give a short 1 liner.
+All the questions have been answered in quite details in the jupyter notebook at the appropriate places. Here I will give a short 1 liner.
 
 1. **must mention the data representation**
 
@@ -108,7 +108,7 @@ As shown in the diagram the concatenation happens before FC3
 
 4. **must mention how you are evaluating your results** 
 
-Since MNIST images come with 10000 test images we are using them along with 10000 random numbers to see if the network can predict correct MNIST label and sum labels.
+Since MNIST images come with 10000 test images I am using them along with 10000 random numbers to see if the network can predict correct MNIST label and sum labels.
 
 5. **must mention "what" results you finally got and how did you evaluate your results**
 
@@ -116,7 +116,7 @@ Please see the results Section below
 
 6. **must mention what loss function you picked and why!**
 
-We are using the cross entropy loss. The detailed explaination is in [notebook](https://github.com/TSAI-END3-Group/Pytorch_Assignment/blob/master/notebooks/pytorch_assignment_solution_Approach1.ipynb)
+I am using the cross entropy loss. The detailed explaination is in [notebook](https://github.com/rohdimp24/EVA8/blob/master/session2_5/notebooks/pytorch_assignment_solution_Approach1.ipynb)
 
 
 
@@ -125,9 +125,9 @@ The **training accuracy** is **98%** for detecting the MNIST images and **97%** 
 The **testing accuracy** is **~97%** for both MNIST images and Sum Labels.
 
 ### Logs
-We have generated the training logs for the two approaches
+I have generated the training logs for the two approaches
 
-1. [Approach1](https://github.com/TSAI-END3-Group/Pytorch_Assignment/blob/master/notebooks/pytorch_assignment_solution_Approach1.ipynb) __training log__
+1. [Approach1](https://github.com/rohdimp24/EVA8/blob/master/session2_5/notebooks/pytorch_assignment_solution_Approach1.ipynb) __training log__
 
 ![alt text](img/approach1_training.png "Title")
 
@@ -140,7 +140,7 @@ The testing accuracy for both MNIST and sum labels is 98% and the loss is 0.3
 
 
 
-2. [Approach2](https://github.com/TSAI-END3-Group/Pytorch_Assignment/blob/master/notebooks/pytorch_assignment_solution_Approach2.ipynb)
+2. [Approach2](https://github.com/rohdimp24/EVA8/blob/master/session2_5/notebooks/pytorch_assignment_solution_Approach2.ipynb)
 
 ![alt text](img/approach2_training.png "Title")
 
@@ -156,10 +156,10 @@ This shows both the approaches are almost same
 
 
 <hr>
-We have also plotted the training data from approach 1 using the Tensorboard.
+I have also plotted the training data from approach 1 using the Tensorboard.
 
 
-Below are the curves that we get from TensorBoard. ( we have used the ```tensorboard from torch.utils.tensorboard import SummaryWriter``` to write to the tensorboard)
+Below are the curves that we get from TensorBoard. ( I have used the ```tensorboard from torch.utils.tensorboard import SummaryWriter``` to write to the tensorboard)
 #### Loss curve
 ![alt text](img/tb_loss.png "Title")
 
@@ -174,13 +174,8 @@ Below are the curves that we get from TensorBoard. ( we have used the ```tensorb
 
 ## Repository Files
 
-1. [pytorch_assignment_solution_Approach1.ipynb](https://github.com/TSAI-END3-Group/Pytorch_Assignment/blob/master/notebooks/pytorch_assignment_solution_Approach1.ipynb) : Solution using approach1
+1. [pytorch_assignment_solution_Approach1.ipynb](https://github.com/rohdimp24/EVA8/blob/master/session2_5/notebooks/pytorch_assignment_solution_Approach1.ipynb) : Solution using approach1
 
-2. [pytorch_assignment_solution_Approach2.ipynb](https://github.com/TSAI-END3-Group/Pytorch_Assignment/blob/master/notebooks/pytorch_assignment_solution_Approach2.ipynb) : Solution using approach2
+2. [pytorch_assignment_solution_Approach2.ipynb](https://github.com/rohdimp24/EVA8/blob/master/session2_5/notebooks/pytorch_assignment_solution_Approach2.ipynb) : Solution using approach2
 
 
-## Contributors
-* Rohit Agarwal
-* Kushal Gandhi
-* Vivek Kumar 
-* Ammishaddai U
